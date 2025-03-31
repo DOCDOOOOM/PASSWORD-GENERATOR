@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strong Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Password Generator</h1>
+
+        <!-- Password Strength Meter -->
+        <div class="password-strength">
+            <div class="strength-bar" id="strength-bar"></div>
+        </div>
+
+        <!-- Password Settings -->
+        <div class="settings">
+            <label for="length">Length: <span id="length-value">12</span></label>
+            <input type="range" id="length" min="6" max="34" value="12">
+
+            <label for="uppercase">Include Uppercase</label>
+            <input type="checkbox" id="uppercase" checked>
+
+            <label for="lowercase">Include Lowercase</label>
+            <input type="checkbox" id="lowercase" checked>
+
+            <label for="numbers">Include Numbers</label>
+            <input type="checkbox" id="numbers" checked>
+
+            <label for="symbols">Include Symbols</label>
+            <input type="checkbox" id="symbols" checked>
+        </div>
+
+        <!-- Generate and Copy Buttons -->
+        <div class="buttons">
+            <button id="generate" class="btn">Generate Password</button>
+            <button id="copy" class="btn">Copy Password</button>
+        </div>
+
+        <!-- Password Display -->
+        <div class="password-display">
+            <input type="text" id="password" readonly>
+        </div>
+    </div>
+
+    <div id="floating-elements"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
